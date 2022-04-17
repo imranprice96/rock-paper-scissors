@@ -10,7 +10,27 @@ function playRound(playerSelection, computerSelection){
     if (playerSelection == computerSelection){
         return `Draw! Both chose ${computerSelection}.`;
     };
+    let result = checkWin(playerSelection, computerSelection);
+    if(result){
+        return `Win! ${playerSelection} beats ${computerSelection}.`;
+    } else{
+        return `Loss! ${computerSelection} beats ${playerSelection}.`;
+    }
 };
+
+function checkWin(playerSelection, computerSelection){
+    let result = false;
+    if(playerSelection == 'rock' && computerSelection == 'scissors'){
+        result = true;
+    };
+    if(playerSelection == 'paper' && computerSelection == 'rock'){
+        result = true;
+    };
+    if(playerSelection == 'scissors' && computerSelection == 'paper'){
+        result = true;
+    };
+    return result;
+}
 
 
 
