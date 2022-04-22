@@ -6,7 +6,13 @@ function computerPlay(moves){
     return moves[i];
 };
 
-function playRound(playerSelection, computerSelection){
+function playRound(playerInput){
+
+    const computerSelection = computerPlay(moves);
+    const playerSelection = playerInput;
+
+    console.log(computerSelection, playerSelection)
+
     if (playerSelection == computerSelection){
         return `Draw! Both chose ${computerSelection}.`;
     };
@@ -16,6 +22,7 @@ function playRound(playerSelection, computerSelection){
     } else{
         return `Loss! ${computerSelection} beats ${playerSelection}.`;
     }
+
 };
 
 function checkWin(playerSelection, computerSelection){
@@ -44,11 +51,6 @@ function getUserMove(){
 };
 
 function game(){
-    for(i =0; i<5; i++){
-        let pMove = getUserMove();
-        let cMove = computerPlay(moves);
-        let result = playRound(pMove, cMove);
-        console.log(`Round ${i+1}`);
-        console.log(result);
-    }
+
 }
+
