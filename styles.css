@@ -1,0 +1,30 @@
+
+body{
+    font-family: sans-serif;
+    background-color: rgb(210, 255, 255);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: paleturquoise;
+}
+
+.btn{
+    width: 150px;
+    height: 100px;
+    font-size: 24px;
+}
+
+.move-selection{
+    display: flex;
+    gap: 50px;
+    justify-content: space-around;
+    padding: 25px;
+}
+
+.score{
+    background-color:  paleturquoise;
+    padding: 10px;
+}

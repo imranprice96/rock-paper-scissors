@@ -6,13 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <script src="app.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-   <div class="move-selection">
-        <button id="rock" onclick="playRound(this.id)">Rock</button>
-        <button id="paper" onclick="playRound(this.id)">Paper</button>
-        <button id="scissors" onclick="playRound(this.id)">Scissors</button>
+   <div class="container">
+       <h1>Rock, Paper, Scissors</h1>
+       <div class="move-selection">
+            <button class="btn" id="rock" onclick="playRound(this.id)">Rock</button>
+            <button class="btn" id="paper" onclick="playRound(this.id)">Paper</button>
+            <button class="btn" id="scissors" onclick="playRound(this.id)">Scissors</button>
+       </div>
+       <div class="score" id="score-screen"></div>
    </div>
-   <div id="score-screen"></div>
+   
 </body>
 </html>

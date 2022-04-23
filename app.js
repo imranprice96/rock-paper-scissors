@@ -12,11 +12,17 @@ function computerPlay(moves){
 function playRound(playerInput){
     const computerSelection = computerPlay(moves);
     const playerSelection = playerInput;
-
-    updateScore(playerSelection,computerSelection);
-    const s = document.querySelector('#score-screen');
-    s.addEventListener('change', checkEnd());
+    
     count++;
+
+    //const s = document.querySelector('#score-screen');
+    //s.addEventListener('click', checkEnd());
+
+    if(count >= 6){
+        endGame();
+    } else{
+        updateScore(playerSelection,computerSelection);
+    };
 };
 
 function checkWin(playerSelection, computerSelection){
@@ -33,9 +39,11 @@ function checkWin(playerSelection, computerSelection){
     return result;
 }
 
+/*
 function checkEnd(){
-    if(count >= 5) endGame(playerScore,computerScore);
+    if(count >= 5) endGame();
 }
+*/
 
 
 function getUserMove(){
@@ -69,7 +77,7 @@ function updateScore(playerSelection, computerSelection){
     scoreScreen.appendChild(p);
 };
 
-function endGame(playerScore, computerScore){
+function endGame(){
     let ending;
     if(playerScore == computerScore){
         ending = `Draw!\nYou: ${playerScore}\nComputer: ${computerScore}`;
